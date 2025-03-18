@@ -18,6 +18,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.bignerdranch.android.jetpackcomposepokedex.pokemonList.PokemonListScreen
 import com.bignerdranch.android.jetpackcomposepokedex.ui.JetpackComposePokedexTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,7 +37,9 @@ class MainActivity : ComponentActivity() {
                     composable(
                         route = "pokemon_list_screen",
                     ) {
-
+                        PokemonListScreen(
+                            navController = navController,
+                        )
                     }
                     composable(
                         route = "w/{dominationColor}/{pokemonName}",
